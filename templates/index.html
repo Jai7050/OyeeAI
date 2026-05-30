@@ -1,1 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OyeAI Ultra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
 
+  <main class="shell">
+    <section class="hero-card">
+      <div class="hero-top">
+        <div class="brand-wrap">
+          <div class="orb-shell" id="orbShell">
+            <div class="orb-core"></div>
+            <div class="orb-ring ring-1"></div>
+            <div class="orb-ring ring-2"></div>
+            <div class="orb-ring ring-3"></div>
+          </div>
+          <div>
+            <h1>OyeAI</h1>
+            <p class="sub">Desktop AI • Voice • Weather • App Launcher</p>
+          </div>
+        </div>
+
+        <div class="status-panel">
+          <div class="status-pill" id="statusPill">Idle</div>
+          <div class="mini-metrics">
+            <div class="metric">
+              <span>Time</span>
+              <strong id="liveTime">--:--</strong>
+            </div>
+            <div class="metric">
+              <span>Mic</span>
+              <strong id="micState">Off</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="voice-visualizer" id="voiceVisualizer" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+      </div>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-header">
+        <h2>Conversation</h2>
+        <button class="ghost-btn" id="clearBtn">Clear</button>
+      </div>
+
+      <div id="chat" class="chat-log"></div>
+
+      <form class="composer" id="composerForm">
+        <input
+          type="text"
+          id="input"
+          placeholder="Ask something... try 'open notepad', 'weather in Mumbai', 'time'"
+          autocomplete="off"
+        />
+        <button type="button" class="icon-btn secondary" id="locationBtn" title="Use location for weather">📍</button>
+        <button type="button" class="icon-btn secondary" id="voiceBtn" title="Voice input">🎙️</button>
+        <button type="submit" class="icon-btn primary" title="Send">➜</button>
+      </form>
+
+      <div class="quick-actions">
+        <button data-msg="time">Time</button>
+        <button data-msg="weather in Mumbai">Weather</button>
+        <button data-msg="open youtube">YouTube</button>
+        <button data-msg="open notepad">Notepad</button>
+        <button data-msg="open calculator">Calculator</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
